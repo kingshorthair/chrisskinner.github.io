@@ -1,0 +1,447 @@
+{
+  "basics": {
+    "name": "Christopher C Skinner",
+    "label": "Data Management & Data Science Lead • Geospatial Architect",
+    "email": "kingshorthair@gmail.com",
+    "phone": "303-594-5127",
+    "location": {
+      "city": "Denver",
+      "region": "Colorado",
+      "country": "USA"
+    },
+    "url": "https://www.linkedin.com/in/chriscskinner/",
+    "summary": "Senior Geospatial Administrator with 20+ years leading enterprise GIS platforms in energy and environmental domains. Expert in ArcGIS Enterprise, SQL Server, and Python with a focus on automation, integration, and metadata strategy. Proven track record modernizing legacy systems and aligning spatial data workflows with business goals."
+  },
+  "skills": [
+    {
+      "name": "GIS Architecture",
+      "keywords": [
+        "ArcGIS Enterprise",
+        "Portal",
+        "Server",
+        "Data Store",
+        "ArcGIS Pro",
+        "ArcGIS Online"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": [
+        "SQL Server",
+        "Geospatial schemas",
+        "Enterprise Geodatabases"
+      ]
+    },
+    {
+      "name": "Programming & Automation",
+      "keywords": [
+        "Python",
+        "ArcPy",
+        "SQL",
+        "FME"
+      ]
+    },
+    {
+      "name": "Deployment & Ops",
+      "keywords": [
+        "Dev/Test/Prod",
+        "Federated GIS",
+        "REST APIs",
+        "Interoperability"
+      ]
+    },
+    {
+      "name": "Energy Domain",
+      "keywords": [
+        "Oil & Gas",
+        "CCUS",
+        "Water",
+        "Geothermal",
+        "Land"
+      ]
+    },
+    {
+      "name": "Metadata & Governance",
+      "keywords": [
+        "Standards",
+        "Documentation",
+        "Stakeholder engagement"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "name": "U.S. Geological Survey (USGS), Energy Resources Program",
+      "location": "Denver, CO",
+      "position": "Data Management and Data Science Lead",
+      "startDate": "2022-01",
+      "endDate": "2025-08",
+      "highlights": [
+        "Modernized enterprise spatial systems to support secure, scalable GIS services.",
+        "Directed team efforts in ArcGIS Enterprise architecture and administration.",
+        "Built spatial data models and automated pipelines for multi-theme datasets.",
+        "Led GIS metadata standards adoption across geoscience teams.",
+        "Partnered with IT to optimize infrastructure and system performance."
+      ]
+    },
+    {
+      "name": "U.S. Geological Survey (USGS), Energy Resources Program",
+      "location": "Denver, CO",
+      "position": "Energy Program Database Task Lead",
+      "startDate": "2013-01",
+      "endDate": "2025-08",
+      "highlights": [
+        "Managed $2.7M/year upstream data contract across oil & gas, geothermal, and CCUS.",
+        "Integrated proprietary/vendor datasets into Kingdom and ArcGIS via SQL and Python.",
+        "Produced dashboards and spatial apps for compliance and reporting.",
+        "Maintained quality control protocols and coordinated access control policies."
+      ]
+    },
+    {
+      "name": "U.S. Geological Survey (USGS), Energy Resources Program",
+      "location": "Denver, CO",
+      "position": "IT Specialist (Geospatial Database Management)",
+      "startDate": "1999-01",
+      "endDate": "2021-12",
+      "highlights": [
+        "Designed spatial databases and automated geoprocessing with Python and SQL.",
+        "Supported ArcGIS Server and enterprise geodatabase administration.",
+        "Integrated legacy and cloud systems for public-facing data applications.",
+        "Promoted data stewardship and accessibility through outreach and training."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Colorado Denver",
+      "area": "Civil Engineering – Geographic Information Systems (GIS)",
+      "studyType": "M.S.",
+      "endDate": "2003"
+    },
+    {
+      "institution": "Colorado State University",
+      "area": "Natural Resource Management (GIS Minor)",
+      "studyType": "B.S.",
+      "endDate": "1998",
+      "notes": "Department of Forest Sciences Honor Senior"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Esri Special Achievement in GIS Award",
+      "date": "2003",
+      "awarder": "Esri",
+      "summary": "Presented by President Jack Dangermond for innovation and impact in enterprise geospatial systems."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Geological Hydrogen Explorer",
+      "url": "https://www.usgs.gov/tools/geologic-hydrogen-prospectivity-map-explorer"
+    },
+    {
+      "name": "U.S. Aggregated Oil and Gas Drilling and History",
+      "url": "https://certmapper.cr.usgs.gov/data/apps/oil_gas_cells/"
+    },
+    {
+      "name": "NPR-A Seismic and Well Archive",
+      "url": "https://certmapper.cr.usgs.gov/data/apps/npra/"
+    },
+    {
+      "name": "Orphaned Wells and Groundwater Quality",
+      "url": "https://certmapper.cr.usgs.gov/data/apps/orphanedwell_waterquality/"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Central Energy Resources Team Data Management — A Data Management Life-Cycle",
+      "publisher": "USGS Fact Sheet FS-163-00",
+      "releaseDate": "2000",
+      "url": "http://pubs.usgs.gov/fs/2000/fs163-00/",
+      "summary": "USGS Fact Sheet — —",
+      "type": "USGS Fact Sheet",
+      "location": "—",
+      "authors": "Ferderer, D.A.; Skinner, C.C.; Gunther, G.L."
+    },
+    {
+      "name": "USGS National Oil and Gas Assessment Online",
+      "publisher": "ArcUser Magazine (Oct–Dec 2002)",
+      "releaseDate": "2002",
+      "url": "https://www.esri.com/news/arcuser/1002/noga1of2.html",
+      "summary": "Article — —",
+      "type": "Article",
+      "location": "—",
+      "authors": "Laura R.H. Biewick; Gregory L. Gunther; Christopher C. Skinner"
+    },
+    {
+      "name": "USGS National Oil and Gas Assessment Online (NOGA Online)",
+      "publisher": "Esri User Conference Proceedings",
+      "releaseDate": "2002",
+      "url": "https://proceedings.esri.com/library/userconf/proc02/pap0826/p0826.htm",
+      "summary": "Conference paper — San Diego, CA",
+      "type": "Conference paper",
+      "location": "San Diego, CA",
+      "authors": "Laura R.H. Biewick; Gregory L. Gunther; Christopher C. Skinner"
+    },
+    {
+      "name": "ArcIMS in a Secure, Multi-Author Production Environment",
+      "publisher": "Esri User Conference Abstracts",
+      "releaseDate": "2003",
+      "url": "http://gis.esri.com/library/userconf/proc03/abstracts/a0228.pdf",
+      "summary": "Conference abstract — San Diego, CA",
+      "type": "Conference abstract",
+      "location": "San Diego, CA",
+      "authors": "Skinner, C.C.; Gunther, G.L.; Biewick, L.R.H.; McDonald, T.S.; Ferderer, D.A."
+    },
+    {
+      "name": "USGS National Assessment of Oil and Gas Online (NOGA Online)",
+      "publisher": "USGS Fact Sheet FS-098-03",
+      "releaseDate": "2003",
+      "url": "http://pubs.usgs.gov/fs/fs-098-03/",
+      "summary": "USGS Fact Sheet — —",
+      "type": "USGS Fact Sheet",
+      "location": "—",
+      "authors": "Biewick, L.R.H.; Gunther, G.L.; Skinner, C.C.; Schenk, C.J.; Ferderer, D.A."
+    },
+    {
+      "name": "GIS Activities in the Central Energy Resources Team: A Model for Expanding GIS Utilization",
+      "publisher": "USGS Fifth Biennial GIS Workshop (published in SIR 2005–5236)",
+      "releaseDate": "2004",
+      "url": "https://pubs.usgs.gov/sir/2005/5236/pdf/sir2005_5236.pdf",
+      "summary": "Conference presentation (abstract in proceedings) — Denver, CO",
+      "type": "Conference presentation (abstract in proceedings)",
+      "location": "Denver, CO",
+      "authors": "Laura R.H. Biewick; Gregory L. Gunther; Christopher C. Skinner; David A. Ferderer"
+    },
+    {
+      "name": "Content Delivery and Discovery Using Metadata Services",
+      "publisher": "Esri User Conference (Professional Papers)",
+      "releaseDate": "2005",
+      "url": "https://proceedings.esri.com/library/userconf/proc05/abstracts/a1590.html",
+      "summary": "Conference presentation — San Diego, CA",
+      "type": "Conference presentation",
+      "location": "San Diego, CA",
+      "authors": "Gregory Gunther; Laura Biewick; David Ferderer; Christopher Skinner"
+    },
+    {
+      "name": "Discovering USGS Energy Program Content Through the Web Using Metadata Services",
+      "publisher": "Esri User Conference Abstracts",
+      "releaseDate": "2005",
+      "url": null,
+      "summary": "Conference abstract — San Diego, CA",
+      "type": "Conference abstract",
+      "location": "San Diego, CA",
+      "authors": "Skinner, C.C.; Gunther, G.L.; Biewick, L.R.H.; Ferderer, D.A."
+    },
+    {
+      "name": "Habitat Needs Assessment Geographic Information System Query Tool for the Upper Mississippi River System",
+      "publisher": "USGS Scientific Investigations Report 2005–5117",
+      "releaseDate": "2005",
+      "url": "https://pubs.usgs.gov/sir/2005/5117/",
+      "summary": "USGS report — —",
+      "type": "USGS report",
+      "location": "—",
+      "authors": "David A. Ferderer; Gregory L. Gunther; Chris Skinner"
+    },
+    {
+      "name": "World Energy Products (WEP) Portal",
+      "publisher": "Esri Petroleum User Group (PUG) Conference",
+      "releaseDate": "2005",
+      "url": "https://oilit.com/1_tw/2005_contents/0505_ESRI_PUG.pdf",
+      "summary": "Conference presentation — Houston, TX",
+      "type": "Conference presentation",
+      "location": "Houston, TX",
+      "authors": "Chris Skinner"
+    },
+    {
+      "name": "GIS Activities in the USGS Central Energy Resources Team: A Model for Expanding GIS Utilization",
+      "publisher": "AAPG Annual Convention",
+      "releaseDate": "2006",
+      "url": "https://www.searchanddiscovery.com/documents/2006/06138biewick/",
+      "summary": "Poster (extended abstract) — Houston, TX",
+      "type": "Poster (extended abstract)",
+      "location": "Houston, TX",
+      "authors": "Laura R.H. Biewick; Gregory L. Gunther; Christopher C. Skinner; David A. Ferderer"
+    },
+    {
+      "name": "Oracle and ArcSDE Deployment with Linux Red Hat and Dell Server Architecture",
+      "publisher": "Esri International User Conference — Track: System Implementation for GIS",
+      "releaseDate": "2006",
+      "url": "https://proceedings.esri.com/library/userconf/proc06/papers/abstracts/a1634.html",
+      "summary": "Conference presentation (abstract) — San Diego, CA",
+      "type": "Conference presentation (abstract)",
+      "location": "San Diego, CA",
+      "authors": "Raymond Obuch; Christopher Skinner"
+    },
+    {
+      "name": "USGS Energy Program Geoinformatics: From Data Management to Information Services",
+      "publisher": "Geoinformatics Conference",
+      "releaseDate": "2007",
+      "url": null,
+      "summary": "Conference abstract — San Diego, CA",
+      "type": "Conference abstract",
+      "location": "San Diego, CA",
+      "authors": "Ferderer, D.A.; Gunther, G.L.; Skinner, C.C.; Biewick, L.R.H."
+    },
+    {
+      "name": "USGS Oil and Gas Assessment Explorer: An Interactive Web Application to Discover USGS Assessment Research",
+      "publisher": "Esri Petroleum Users Group (PUG) Meeting",
+      "releaseDate": "2008",
+      "url": null,
+      "summary": "Conference abstract — Houston, TX",
+      "type": "Conference abstract",
+      "location": "Houston, TX",
+      "authors": "Skinner, C.C.; Gunther, G.L.; Ferderer, D.A.; Biewick, L.R.H."
+    },
+    {
+      "name": "USGS Oil and Gas Assessment Explorer: an Interactive Web Application to Access USGS Assessment Research",
+      "publisher": "USGS Seventh Biennial GIS Workshop (SIR 2008–5074)",
+      "releaseDate": "2008",
+      "url": "https://pubs.usgs.gov/sir/2008/5074/pdf/SIR2008-5074.pdf",
+      "summary": "Conference presentation (abstract in proceedings) — Denver, CO",
+      "type": "Conference presentation (abstract in proceedings)",
+      "location": "Denver, CO",
+      "authors": "Chris Skinner; Greg Gunther; Dave Ferderer; Laura Biewick"
+    },
+    {
+      "name": "The GIS Project for the Geologic Assessment of In-Place Oil Shale Resources of the Piceance Basin, Colorado (Chapter 4)",
+      "publisher": "USGS DDS-69-Y",
+      "releaseDate": "2010",
+      "url": "http://pubs.usgs.gov/dds/dds-069/dds-069-y/REPORTS/69_Y_CH_4.pdf",
+      "summary": "USGS DDS Chapter — —",
+      "type": "USGS DDS Chapter",
+      "location": "—",
+      "authors": "Mercier, T.J.; Gunther, G.L.; Skinner, C.C."
+    },
+    {
+      "name": "The GIS Project for the Geologic Assessment of In-Place Oil Shale Resources of the Uinta Basin, Utah and Colorado (Chapter 4)",
+      "publisher": "USGS DDS-69-BB",
+      "releaseDate": "2010",
+      "url": "http://pubs.usgs.gov/dds/dds-069/dds-069-bb/REPORTS/69_BB_CH_4.pdf",
+      "summary": "USGS DDS Chapter — —",
+      "type": "USGS DDS Chapter",
+      "location": "—",
+      "authors": "Mercier, T.J.; Gunther, G.L.; Skinner, C.C."
+    },
+    {
+      "name": "Oil shale resources of the Eocene Green River Formation, Greater Green River Basin, Wyoming, Colorado, and Utah",
+      "publisher": "USGS DDS (linked from staff profile)",
+      "releaseDate": "2011",
+      "url": "https://www.usgs.gov/staff-profiles/christopher-c-skinner",
+      "summary": "USGS digital data series (CD-ROM) — —",
+      "type": "USGS digital data series (CD-ROM)",
+      "location": "—",
+      "authors": "USGS Energy Resources Program (includes Denver CERT team; see staff profile)"
+    },
+    {
+      "name": "The GIS Project for the Geologic Assessment of In-Place Oil Shale Resources of the Green River Formation, Greater Green River Basin, Wyoming, Colorado and Utah (Chapter 3)",
+      "publisher": "USGS DDS-69-DD",
+      "releaseDate": "2011",
+      "url": "http://pubs.usgs.gov/dds/dds-069/dds-069-dd/REPORTS/69_DD_CH_3.pdf",
+      "summary": "USGS DDS Chapter — —",
+      "type": "USGS DDS Chapter",
+      "location": "—",
+      "authors": "Mercier, T.J.; Gunther, G.L.; Skinner, C.C."
+    },
+    {
+      "name": "PPDM Denver Q4 Data Management Luncheon — Bureau of Reclamation Hydraulic Laboratory tour",
+      "publisher": "PPDM Denver Data Management Luncheon (Q4)",
+      "releaseDate": "2015",
+      "url": "https://ppdm.org/PPDM/PPDM/Event_Display.aspx?EventKey=LDENQ42015&WebsiteKey=927055e8-ec5d-4b51-96ef-5dbe0a133439",
+      "summary": "Organizer/Facilitator (tour) — Denver, CO",
+      "type": "Organizer/Facilitator (tour)",
+      "location": "Denver, CO",
+      "authors": "Ray Obuch; Chris Skinner (USGS)"
+    },
+    {
+      "name": "PPDM Denver Leadership Team — Q3 Luncheon & Denver Data Management Workshop involvement",
+      "publisher": "PPDM Denver",
+      "releaseDate": "2016",
+      "url": "https://dl.ppdm.org/dl/1725",
+      "summary": "Leadership (chapter/organizing) — Denver, CO",
+      "type": "Leadership (chapter/organizing)",
+      "location": "Denver, CO",
+      "authors": "Chris Skinner (USGS)"
+    },
+    {
+      "name": "PPDM Denver Q2 Data Management Luncheon at USGS (Denver Federal Center)",
+      "publisher": "PPDM Denver Data Management Luncheon (Q2)",
+      "releaseDate": "2017",
+      "url": "https://ppdm.org/PPDM/PPDM/Event_Display.aspx?EventKey=LDENQ22017&WebsiteKey=927055e8-ec5d-4b51-96ef-5dbe0a133439",
+      "summary": "Host/Organizer — Lakewood, CO",
+      "type": "Host/Organizer",
+      "location": "Lakewood, CO",
+      "authors": "Chris Skinner (USGS)"
+    },
+    {
+      "name": "PPDM Denver Petroleum Data Symposium — Morning Break (Facilitator)",
+      "publisher": "PPDM Denver Petroleum Data Symposium",
+      "releaseDate": "2018",
+      "url": "https://dl.ppdm.org/dl/2260",
+      "summary": "Facilitator/Leadership — Denver, CO",
+      "type": "Facilitator/Leadership",
+      "location": "Denver, CO",
+      "authors": "Carrie Salerno; Chris Skinner (Denver Leadership Team)"
+    },
+    {
+      "name": "PPDM Denver Petroleum Data Symposium — Denver Leadership Team acknowledgement",
+      "publisher": "PPDM Denver Petroleum Data Symposium",
+      "releaseDate": "2019",
+      "url": "https://dl.ppdm.org/dl/2573",
+      "summary": "Leadership (chapter) — Denver, CO",
+      "type": "Leadership (chapter)",
+      "location": "Denver, CO",
+      "authors": "Chris Skinner (Denver Leadership Team)"
+    },
+    {
+      "name": "Central Energy Resources Science Center (CERSC) Data Management Services Project (DMSP) Overview",
+      "publisher": "USGS CDI Workshop 2021",
+      "releaseDate": "2021",
+      "url": null,
+      "summary": "Poster (digital) — —",
+      "type": "Poster (digital)",
+      "location": "—",
+      "authors": "Gunther, G.; Chavez, C.D.; Kinney, S.; Metzger, M.; Miller, R.F.; Obuch, R.C.; Otterson, A.; Skinner, C.C.; Varela, B."
+    },
+    {
+      "name": "A snapshot of stakeholder science needs related to drought in the Colorado River Basin",
+      "publisher": "U.S. Geological Survey Data Release (ScienceBase)",
+      "releaseDate": "2021",
+      "url": "https://doi.org/10.5066/P9CTXP26",
+      "summary": "USGS Data Release — —",
+      "type": "USGS Data Release",
+      "location": "—",
+      "authors": "Frus, R.J.; Hawbaker, T.J.; Anderson, E.D.; Anderson, P.J.; Andrews, W.J.; Bradford, J.B.; Dean, D.J.; Duniway, M.C.; Jones, D.K.; Monroe, A.P.; Qi, S.L.; Skinner, C.C.; Thomas, K.A.; Tillery, A.C.; Torregrosa, A.; Dahm, K.G."
+    },
+    {
+      "name": "Aggregated Oil and Natural Gas Drilling and Production History of the United States (ver. 1.1, April 2023)",
+      "publisher": "USGS ScienceBase Data Release",
+      "releaseDate": "2022",
+      "url": "https://www.sciencebase.gov/catalog/item/63347bbed34e71c6d6713c0a",
+      "summary": "USGS data release — —",
+      "type": "USGS data release",
+      "location": "—",
+      "authors": "B. Attanasi; L.R.H. Biewick; S. Kinney; C.C. Skinner; M.D. Merrill; J.D. Merrill; W.A. Overton; J. Sorenson; T.J. Brown; B.R. Luff"
+    },
+    {
+      "name": "Metadata Show and Tell (Spatial) — USGS CDI Monthly Meeting (July 1, 2024)",
+      "publisher": "USGS Community for Data Integration (CDI)",
+      "releaseDate": "2024",
+      "url": "https://www.usgs.gov/usgs-community-data-integration-cdi/cdi-fy24",
+      "summary": "Talk (Lightning/Show & Tell) — —",
+      "type": "Talk (Lightning/Show & Tell)",
+      "location": "—",
+      "authors": "Chris Skinner"
+    },
+    {
+      "name": "Data Release for Prospectivity Mapping for Geologic Hydrogen",
+      "publisher": "USGS Data Release (DOI:10.5066/P13WCG5U)",
+      "releaseDate": "2025",
+      "url": "https://www.usgs.gov/data/data-release-prospectivity-mapping-geologic-hydrogen",
+      "summary": "USGS data release — —",
+      "type": "USGS data release",
+      "location": "—",
+      "authors": "J.S. Hearon; S.E. Gelman; G.S. Ellis; S.A. Kinney; R.F. Miller; A.A. Tikku; C.C. Skinner; M.M. O’Halloran; M. Zhang"
+    }
+  ]
+}
