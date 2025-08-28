@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris Skinner – Portfolio & Resume</title>
+  <meta name="description" content="Immersive resume and portfolio for Christopher C. Skinner" />
+  <!-- TailwindCSS CDN (play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ring: 0 0% 100% / .6 } /* subtle glow */
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.75); }
+  </style>
+  <!-- Chart.js for the radar -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body class="bg-zinc-50 text-zinc-900">
+  <!-- Hero / Header -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-indigo-100 to-fuchsia-100"></div>
+    <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-14">
+      <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-8">
+        <div>
+          <h1 id="name" class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"></h1>
+          <p id="label" class="mt-3 text-lg sm:text-xl text-zinc-700"></p>
+          <p id="summary" class="mt-5 max-w-3xl text-base sm:text-lg text-zinc-700"></p>
+          <div class="mt-6 flex flex-wrap items-center gap-3 text-sm">
+            <a id="emailLink" class="px-3 py-2 rounded-xl bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200" href="#">Email</a>
+            <a id="phoneLink" class="px-3 py-2 rounded-xl bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200" href="#">Call</a>
+            <a id="linkedinLink" class="px-3 py-2 rounded-xl bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a id="downloadJson" class="px-3 py-2 rounded-xl bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200" href="resume.json" download>Download resume.json</a>
+          </div>
+        </div>
+        <div class="w-full md:w-2/5 glass rounded-2xl p-5 shadow-lg ring-1 ring-zinc-200">
+          <h2 class="text-sm font-semibold tracking-wider uppercase text-zinc-600">Strengths Overview</h2>
+          <canvas id="strengthsChart" class="mt-2"></canvas>
+          <p class="mt-2 text-xs text-zinc-600">Interactive radar generated from skill levels in <code>resume.json</code>.</p>
+        </div>
+      </div>
+      <nav class="mt-10 flex flex-wrap gap-4 text-sm">
+        <a href="#skills" class="px-3 py-1 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200">Skills</a>
+        <a href="#projects" class="px-3 py-1 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200">Projects</a>
+        <a href="#work" class="px-3 py-1 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200">Experience</a>
+        <a href="#publications" class="px-3 py-1 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200">Publications</a>
+        <a href="#contact" class="px-3 py-1 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-zinc-200">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Skills / Chips -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold">Core Skills</h2>
+    <div id="skillsWrap" class="mt-5 flex flex-wrap gap-3"></div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl font-bold">Selected Projects</h2>
+      <a class="text-sm text-indigo-700 hover:underline" href="#publications">See publications & data releases →</a>
+    </div>
+    <div id="projectsGrid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Work Timeline -->
+  <section id="work" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold">Experience</h2>
+    <ol id="workList" class="relative mt-6 border-l border-zinc-200">
+      <!-- items injected here -->
+    </ol>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold">Publications, Talks & Data Releases</h2>
+    <div id="pubFilters" class="mt-4 flex flex-wrap gap-2 text-sm"></div>
+    <div id="pubList" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="mt-16 bg-white border-t">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="font-semibold">Get in touch</p>
+        <p class="text-sm text-zinc-600">Happy to talk data platforms, GIS architecture, and pragmatic automation.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a id="emailLink2" class="px-3 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200" href="#">Email</a>
+        <a id="phoneLink2" class="px-3 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200" href="#">Call</a>
+        <a id="linkedinLink2" class="px-3 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="text-center text-xs text-zinc-500 pb-6">© <span id="year"></span> Chris Skinner — Built with JSON Resume + vanilla JS</div>
+  </footer>
+
+  <script>
+    const $$ = (sel, root=document) => root.querySelector(sel);
+    const $$$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    const PLACEHOLDER_IMG = 'data:image/svg+xml;utf8,' + encodeURIComponent(`
+      <svg xmlns='http://www.w3.org/2000/svg' width='800' height='480'>
+        <rect width='100%' height='100%' fill='#e5e7eb'/>
+        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='#6b7280' font-family='Inter' font-size='20'>Project Screenshot</text>
+      </svg>`);
+
+    function badge(text){
+      const span = document.createElement('span');
+      span.className = 'px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 text-sm';
+      span.textContent = text; return span;
+    }
+
+    function el(tag, cls, html){
+      const e = document.createElement(tag);
+      if(cls) e.className = cls;
+      if(html) e.innerHTML = html;
+      return e;
+    }
+
+    function groupBy(arr, key){
+      return arr.reduce((acc, it)=>{(acc[it[key]||'Other'] ||= []).push(it); return acc;}, {});
+    }
+
+    async function main(){
+      const yearEl = $$('#year'); yearEl.textContent = new Date().getFullYear();
+
+      // Load resume.json (place this file in same folder)
+      let data;
+      try {
+        const res = await fetch('resume.json', {cache: 'no-cache'});
+        data = await res.json();
+      } catch(err){
+        console.error('Failed to load resume.json', err);
+        $$('#summary').textContent = 'Could not load resume.json. Place it next to index.html.';
+        return;
+      }
+
+      const basics = data.basics || {};
+      $$('#name').textContent = basics.name || '';
+      $$('#label').textContent = basics.label || '';
+      $$('#summary').textContent = basics.summary || '';
+
+      // Links
+      const email = basics.email ? `mailto:${basics.email}` : '#';
+      const phone = basics.phone ? `tel:${basics.phone}` : '#';
+      const linkedin = basics.url || '#';
+      ;['emailLink','emailLink2'].forEach(id => $$('#'+id).setAttribute('href', email));
+      ;['phoneLink','phoneLink2'].forEach(id => $$('#'+id).setAttribute('href', phone));
+      ;['linkedinLink','linkedinLink2'].forEach(id => $$('#'+id).setAttribute('href', linkedin));
+
+      // Skills chips + radar input (expects optional 'level' 1..10)
+      const skillsWrap = $$('#skillsWrap');
+      const skills = (data.skills || []).slice();
+      skills.forEach(s => {
+        const chip = badge(s.name);
+        chip.title = (s.keywords || []).join(', ');
+        skillsWrap.appendChild(chip);
+      });
+
+      // Build a radar from skills with a level field, else map some key skills to defaults
+      const leveled = skills.filter(s => typeof s.level === 'number');
+      const fallbackNames = [
+        'GIS Architecture','Data Science / Automation','Programming','System Integration & Interoperability','Data Strategy & FAIR Principles','Visualization & Communication','Innovation & Problem Solving','Leadership & Collaboration'
+      ];
+      const labels = leveled.length ? leveled.map(s=>s.name) : fallbackNames;
+      const values = leveled.length ? leveled.map(s=>Math.max(1, Math.min(10, s.level))) : [9,8,8,8,9,7,8,8];
+
+      new Chart($('#strengthsChart'), {
+        type: 'radar',
+        data: { labels, datasets: [{ label: 'Proficiency', data: values, fill: true }] },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: { r: { beginAtZero: true, max: 10, ticks: { stepSize: 2 } } }
+        }
+      });
+
+      // Projects grid
+      const grid = $$('#projectsGrid');
+      (data.projects || []).forEach(p => {
+        const card = el('article','bg-white rounded-2xl shadow ring-1 ring-zinc-200 overflow-hidden flex flex-col');
+        const img = el('img','h-44 w-full object-cover');
+        img.src = p.image || PLACEHOLDER_IMG;
+        img.alt = p.name;
+        card.appendChild(img);
+
+        const body = el('div','p-4 flex flex-col gap-2');
+        body.appendChild(el('h3','font-semibold text-lg', p.name));
+        if(p.summary) body.appendChild(el('p','text-sm text-zinc-600', p.summary));
+
+        const tagsWrap = el('div','flex flex-wrap gap-2 text-xs text-zinc-600');
+        (p.tags||[]).slice(0,6).forEach(t => tagsWrap.appendChild(badge(t)));
+        body.appendChild(tagsWrap);
+
+        const link = el('a','mt-3 inline-flex items-center gap-2 text-sm text-indigo-700 hover:underline w-fit','Open project →');
+        if(p.url){ link.href = p.url; link.target = '_blank'; link.rel = 'noopener'; }
+        else { link.href = '#'; link.classList.add('pointer-events-none','opacity-50'); }
+        body.appendChild(link);
+
+        card.appendChild(body);
+        grid.appendChild(card);
+      });
+
+      // Work timeline
+      const workList = $$('#workList');
+      (data.work || []).forEach(w => {
+        const li = el('li','ml-4');
+        li.innerHTML = `
+          <div class='absolute w-2 h-2 bg-indigo-600 rounded-full -left-1.5 mt-3'></div>
+          <div class='mb-8'>
+            <div class='flex items-center gap-2'>
+              <h3 class='font-semibold'>${w.position || ''}</h3>
+              <span class='text-xs text-zinc-500'>${w.startDate || ''} – ${w.endDate || 'present'}</span>
+            </div>
+            <div class='text-sm text-zinc-600'>${w.name || ''}${w.location ? ' • '+w.location : ''}</div>
+            <ul class='mt-2 list-disc list-inside text-sm text-zinc-700 space-y-1'>
+              ${(w.highlights||[]).map(h=>`<li>${h}</li>`).join('')}
+            </ul>
+          </div>`;
+        workList.appendChild(li);
+      });
+
+      // Publications: filters + cards
+      const pubs = (data.publications || []).slice().sort((a,b)=>String(b.releaseDate||'').localeCompare(String(a.releaseDate||'')));
+      const byType = groupBy(pubs, 'type');
+      const pubFilters = $$('#pubFilters');
+      const pubList = $$('#pubList');
+
+      function renderPubs(filter){
+        pubList.innerHTML='';
+        (filter ? byType[filter] || [] : pubs).forEach(p => {
+          const card = el('article','bg-white rounded-2xl p-4 shadow ring-1 ring-zinc-200');
+          card.appendChild(el('div','text-xs text-zinc-500', `${p.releaseDate || ''} • ${p.type || p.publisher || ''}`));
+          card.appendChild(el('h3','font-semibold mt-1', p.name || 'Untitled'));
+          if(p.summary) card.appendChild(el('p','text-sm text-zinc-600 mt-1', p.summary));
+          if(p.authors) card.appendChild(el('p','text-xs text-zinc-500 mt-1', p.authors));
+          const row = el('div','mt-2 flex gap-3 text-sm');
+          if(p.url){ const a = el('a','text-indigo-700 hover:underline','Open'); a.href = p.url; a.target='_blank'; a.rel='noopener'; row.appendChild(a); }
+          if(p.publisher){ const s = el('span','text-zinc-500', p.publisher); row.appendChild(s); }
+          card.appendChild(row);
+          pubList.appendChild(card);
+        });
+      }
+
+      // Filter chips
+      const allBtn = badge('All'); allBtn.classList.add('cursor-pointer');
+      allBtn.addEventListener('click', ()=> renderPubs(null));
+      pubFilters.appendChild(allBtn);
+      Object.keys(byType).sort().forEach(t => {
+        const b = badge(t); b.classList.add('cursor-pointer');
+        b.addEventListener('click', ()=> renderPubs(t));
+        pubFilters.appendChild(b);
+      });
+      renderPubs(null);
+    }
+
+    main();
+  </script>
+</body>
+</html>
