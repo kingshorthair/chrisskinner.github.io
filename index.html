@@ -199,7 +199,7 @@
       })).sort((a,b)=>b.level-a.level).slice(0,8);
       new Chart(document.getElementById('radar'), {
         type: 'radar',
-        data: { labels: scored.map(s=>s.label), datasets: [{ label:'Proficiency', data: scored.map(s=>s.level), fill:true, borderWidth:2, pointRadius:3 }]},
+        data: { labels: scored.map(s=>s.label), datasets: [{ label:'Proficiencies', data: scored.map(s=>s.level), fill:true, borderWidth:2, pointRadius:3 }]},
         options: { responsive:true, scales:{ r:{ suggestedMin:0, suggestedMax:10, ticks:{stepSize:2}}}, plugins:{legend:{display:false}}}
       });
 

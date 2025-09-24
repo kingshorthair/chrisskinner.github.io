@@ -41,7 +41,10 @@
         "Python",
         "ArcPy",
         "SQL",
-        "FME"
+        "FME",
+        "R",
+        "JavaScript",
+        "C#"
       ]
     },
     {
@@ -66,7 +69,7 @@
     {
       "name": "Metadata & Governance",
       "keywords": [
-        "Standards",
+        "Business Analysis",
         "Documentation",
         "Stakeholder engagement"
       ]
